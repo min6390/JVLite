@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "907901935027",
+    "firebase_url": "https://jvapplite.firebaseio.com",
+    "project_id": "jvapplite",
+    "storage_bucket": "jvapplite.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:907901935027:android:d1458221d2814f56fe3fc6",
+        "android_client_info": {
+          "package_name": "com.example.jvlite"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "907901935027-pf0s3bhv33t8dmg2dbj4eveufntupkr5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwxrH1nPycvZdLXWEuNfp1jUfQXFkLODI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "907901935027-pf0s3bhv33t8dmg2dbj4eveufntupkr5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

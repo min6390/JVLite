@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginVertical="5sp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/rounded_edittext"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <CheckBox
+                android:id="@+id/checkboxT2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="2sp"
+                android:checked="true"
+                android:text="T3" />
+
+            <CheckBox
+                android:id="@+id/checkboxT3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="2sp"
+                android:checked="false"
+                android:text="T4" />
+
+            <CheckBox
+                android:id="@+id/checkboxT4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="2sp"
+                android:checked="false"
+                android:text="T5" />
+
+            <CheckBox
+                android:id="@+id/checkboxT5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="2sp"
+                android:checked="false"
+                android:text="T6" />
+
+            <CheckBox
+                android:id="@+id/checkboxT6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="2sp"
+                android:checked="false"
+                android:text="T7" />
+
+            <CheckBox
+                android:id="@+id/checkboxT7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="2sp"
+                android:checked="false"
+                android:text="T7" />
+
+            <CheckBox
+                android:id="@+id/checkboxCN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="2sp"
+                android:checked="false"
+                android:text="CN" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15sp"
+                android:text="Ngày bắt đầu : "
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/txtCalendar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15sp"
+                android:clickable="true"
+                android:onClick="onClick"
+                android:text="Ngày bắt đầu  "
+                android:textColor="#03A9F4"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutCalendar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <CalendarView
+                android:firstDayOfWeek="2"
+                android:id="@+id/calendarView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>
