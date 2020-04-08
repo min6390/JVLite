@@ -12,6 +12,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.CalendarView
 import android.widget.Toast
+import com.example.jvlite.MainPACK.HomePACK.MapsActivity
 
 import com.example.jvlite.R
 import kotlinx.android.synthetic.main.activity_main.*
@@ -49,8 +50,8 @@ class HomeFragment : Fragment() {
             diaLogAddress()
         }
         txtMap.setOnClickListener {
-            //val intent = Intent(context, MapsActivity::class.java) // MapsActivity chưa có nè nha, kiem tra lại nhúng SDK đúng chưa, nếu đúng nó sẽ có tuwf bên SDK
-
+           val intent = Intent(context, MapsActivity::class.java) // MapsActivity chưa có nè nha, kiem tra lại nhúng SDK đúng chưa, nếu đúng nó sẽ có tuwf bên SDK
+            startActivity(intent)
         }
     }
 
