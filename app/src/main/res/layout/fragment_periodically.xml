@@ -3,10 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="8sp"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
-
+    tools:context=".MainPACK.HomePACK.Periodically"
+    android:orientation="vertical">
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -176,4 +174,6 @@
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
+
+
 </LinearLayout>
