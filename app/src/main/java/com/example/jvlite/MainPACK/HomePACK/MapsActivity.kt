@@ -7,11 +7,15 @@ import androidx.fragment.app.FragmentActivity
 import com.example.jvlite.R
 import com.google.android.gms.common.api.ApiException
 import com.google.android.gms.common.api.Status
+import com.google.android.gms.location.places.AutocompleteFilter
+import com.google.android.gms.location.places.Place.TYPE_COUNTRY
+import com.google.android.gms.location.places.ui.PlaceAutocomplete
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
+import com.google.android.gms.maps.model.LatLngBounds
 import com.google.android.gms.maps.model.MarkerOptions
 import com.google.android.libraries.places.api.Places
 import com.google.android.libraries.places.api.model.AutocompleteSessionToken
@@ -23,7 +27,6 @@ import com.google.android.libraries.places.api.net.PlacesClient
 import com.google.android.libraries.places.widget.Autocomplete
 import com.google.android.libraries.places.widget.AutocompleteSupportFragment
 import com.google.android.libraries.places.widget.listener.PlaceSelectionListener
-import com.google.android.libraries.places.widget.model.AutocompleteActivityMode
 
 
 class MapsActivity : FragmentActivity(), OnMapReadyCallback {
@@ -47,6 +50,7 @@ class MapsActivity : FragmentActivity(), OnMapReadyCallback {
         if (!Places.isInitialized()) {
             Places.initialize(applicationContext, "AIzaSyBt9JGHKlo8chWR4LF3M075AuLHlHX3BvE" )
         }
+
         val placesClient: PlacesClient = Places.createClient(this)
         val token = AutocompleteSessionToken.newInstance()
         val bounds = RectangularBounds.newInstance(

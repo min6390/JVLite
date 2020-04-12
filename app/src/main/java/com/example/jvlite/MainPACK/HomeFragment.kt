@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import com.example.jvlite.LoginPack.SignOutActivity
 import com.example.jvlite.MainPACK.HomePACK.PeriodicallyActivity
 import com.example.jvlite.R
+import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.fragment_home.*
 
 
