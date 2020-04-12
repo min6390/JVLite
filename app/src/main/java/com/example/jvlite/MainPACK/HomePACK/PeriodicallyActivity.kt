@@ -3,8 +3,10 @@ package com.example.jvlite.MainPACK.HomePACK
 import android.app.AlertDialog
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
+import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 
 import com.example.jvlite.R
@@ -19,6 +21,8 @@ class PeriodicallyActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_periodically)
+        val actionBar: ActionBar? = supportActionBar
+        actionBar?.hide()
         calendar()
         dataTime()
         txtCalendar.setOnClickListener { v ->
@@ -77,14 +81,14 @@ class PeriodicallyActivity : AppCompatActivity() {
 
         }
         btnEnter.setOnClickListener {
+            val int1 : Int =main_wheel_left.currentItemPosition
+            val ft = firstTime[int1]
+            val int2 : Int =main_wheel_right.currentItemPosition
+            val lt = lastTime[int2]
+            txtTime.text = "$ft - $lt"
             wheelPickerLinearLayout.visibility = View.GONE
-//            lateinit var wheelPicker:WheelPicker
-//            var index = wheelPicker.currentItemPosition
-//            var arr1  = arrayListOf(main_wheel_left.data)
-//            var arr2 = arrayListOf(main_wheel_right.data)
-//            var str1 = arr1[index]
-//            var str2 = arr2[index]
-//            Log.d("BBB","$str1 - $str2")
+
+
         }
     }
 
