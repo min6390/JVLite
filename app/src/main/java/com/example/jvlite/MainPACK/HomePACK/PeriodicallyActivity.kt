@@ -3,30 +3,22 @@ package com.example.jvlite.MainPACK.HomePACK
 import android.app.AlertDialog
 import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 
 import com.example.jvlite.R
-import kotlinx.android.synthetic.main.fragment_home.*
+import kotlinx.android.synthetic.main.activity_periodically.*
+
 import kotlinx.android.synthetic.main.include_alertdialog.view.*
 import kotlinx.android.synthetic.main.include_calendar.*
 import kotlinx.android.synthetic.main.include_wheelpicker.*
 
 
-class Periodically : Fragment() {
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false)
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+class PeriodicallyActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_periodically)
         calendar()
         dataTime()
         txtCalendar.setOnClickListener { v ->
@@ -37,7 +29,7 @@ class Periodically : Fragment() {
         }
         txtMap.setOnClickListener {
             val intent = Intent(
-                context,
+                this,
                 MapsActivity::class.java
             )
             startActivity(intent)
@@ -109,8 +101,8 @@ class Periodically : Fragment() {
     }
 
     private fun diaLogAddress() {
-        val dialog = LayoutInflater.from(context).inflate(R.layout.include_alertdialog, null)
-        val mBuilder = AlertDialog.Builder(context)
+        val dialog = LayoutInflater.from(this).inflate(R.layout.include_alertdialog, null)
+        val mBuilder = AlertDialog.Builder(this)
             .setView(dialog)
         val mAlertDialog = mBuilder.show()
         dialog.btnAlertDialog.setOnClickListener {
@@ -121,4 +113,5 @@ class Periodically : Fragment() {
             }
         }
     }
+
 }

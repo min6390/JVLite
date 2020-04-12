@@ -3,177 +3,63 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="8sp"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <ScrollView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="40sp"
+        android:orientation="horizontal"
+        android:background="#4CAF50">
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <ImageView
+            android:layout_marginHorizontal="10sp"
+            android:id="@+id/ivAccount"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:src="@drawable/ic_account" />
+    </RelativeLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:columnCount="2"
+        android:rowCount="2">
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/iclocation_periodic" />
+        <Button
+            android:layout_margin="10sp"
+            android:textColor="#FFF"
+            android:background="@drawable/bg_button_wheelpicker"
+            android:layout_width="175sp"
+            android:layout_height="175sp"
+            android:id="@+id/buttonPeriodically"
+            android:text="định kỳ" />
+        <Button
+            android:layout_margin="10sp"
+            android:textColor="#FFF"
+            android:background="@drawable/bg_button_wheelpicker"
+            android:layout_width="175sp"
+            android:layout_height="175sp"
+            android:id="@+id/buttonRetail"
+            android:text="Dùng lẻ" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="ĐỊA CHỈ LÀM VIỆC"
-                    android:textSize="15sp"
-                    android:textStyle="bold" />
-            </LinearLayout>
+        <Button
+            android:layout_margin="10sp"
+            android:textColor="#FFF"
+            android:background="@drawable/bg_button_wheelpicker"
+            android:layout_width="175sp"
+            android:layout_height="175sp"
+            android:text="Vệ sinh điện lạnh"
+            android:id="@+id/buttonACCleaning" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginVertical="5sp">
-
-                <TextView
-                    android:id="@+id/txtMap"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginVertical="5sp"
-                    android:background="@drawable/rounded_edittext"
-                    android:padding="8sp"
-                    android:text="Tọa độ" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ichome_periodic" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="SỐ NHÀ/CĂN HỘ"
-                    android:textSize="15sp"
-                    android:textStyle="bold" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginVertical="5sp">
-
-                <TextView
-                    android:id="@+id/txtAddress"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginVertical="5sp"
-                    android:background="@drawable/rounded_edittext"
-                    android:hint="Số nhà / Căn hộ"
-                    android:padding="8sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/iccalendar_periodic" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="LỊCH LÀM HẰNG TUẦN"
-                    android:textSize="15sp"
-                    android:textStyle="bold" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginVertical="5sp">
-
-                <include
-                    layout="@layout/include_calendar"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/icaccess_periodic" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="THỜI GIAN LÀM VIỆC"
-                    android:textSize="15sp"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
-            <include
-                layout="@layout/include_wheelpicker"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/icevent_periodic" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="GHI CHÚ"
-                    android:textSize="15sp"
-                    android:textStyle="bold" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginVertical="5sp"
-                    android:background="@drawable/rounded_edittext"
-                    android:hint="Địa chỉ làm việc"
-                    android:padding="8sp" />
-
-                <Button
-                    android:id="@+id/btnNext"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:background="@drawable/rim_button"
-                    android:text="Next"
-                    android:textColor="#FFF" />
-            </LinearLayout>
-        </LinearLayout>
-    </ScrollView>
+        <Button
+            android:layout_margin="10sp"
+            android:textColor="#FFF"
+            android:background="@drawable/bg_button_wheelpicker"
+            android:layout_width="175sp"
+            android:layout_height="175sp"
+            android:id="@+id/buttonKhuKhuan"
+            android:text="Khử Khuẩn" />
+    </GridLayout>
 </LinearLayout>

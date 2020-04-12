@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainPACK.HomePACK.InformationActivity">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_account_signout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20sp"
+        android:id="@+id/ivAccount"/>
+    <TextView
+        android:layout_marginHorizontal="10sp"
+        android:layout_below="@id/ivAccount"
+        android:id="@+id/tvName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Họ tên của bạn"
+        android:textSize="20sp" />
+
+    <EditText
+        android:layout_marginHorizontal="10sp"
+        android:layout_below="@id/tvName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Họ và tên"
+        android:id="@+id/etName"/>
+    <TextView
+        android:layout_marginHorizontal="10sp"
+        android:textSize="20sp"
+        android:id="@+id/tvEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Email của bạn"
+        android:layout_below="@id/etName"/>
+    <EditText
+        android:layout_marginHorizontal="10sp"
+        android:layout_below="@id/tvEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:id="@+id/etEmail"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnInformation"
+        android:text="Lưu Thôn tin"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>
