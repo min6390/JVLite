@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
+import android.widget.CheckBox
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 
@@ -17,14 +18,25 @@ import kotlinx.android.synthetic.main.include_calendar.*
 import kotlinx.android.synthetic.main.include_wheelpicker.*
 
 
-class PeriodicallyActivity : AppCompatActivity() {
+class PeriodicallyActivity : AppCompatActivity(), View.OnClickListener {
+    private var sum : Int =0
+    private var textCalendar : String = ""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_periodically)
         val actionBar: ActionBar? = supportActionBar
         actionBar?.hide()
+
         calendar()
         dataTime()
+        checkboxT2.setOnClickListener(this)
+        checkboxT3.setOnClickListener(this)
+        checkboxT4.setOnClickListener(this)
+        checkboxT5.setOnClickListener(this)
+        checkboxT6.setOnClickListener(this)
+        checkboxT7.setOnClickListener(this)
+        checkboxCN.setOnClickListener(this)
+
         txtCalendar.setOnClickListener { v ->
             linearLayoutCalendar.visibility = View.VISIBLE
         }
@@ -41,6 +53,15 @@ class PeriodicallyActivity : AppCompatActivity() {
         txtTime.setOnClickListener { v ->
             wheelPickerLinearLayout.visibility = View.VISIBLE
         }
+        btnNext.setOnClickListener {
+            var noti = etView.text
+            val intent = Intent(this, PayActivity::class.java)
+            intent.putExtra("sum1",sum)
+            intent.putExtra("noti",noti)
+            startActivity(intent)
+            Log.d("CCC",noti.toString())
+        }
+
     }
 
     private fun dataTime() {
@@ -85,9 +106,9 @@ class PeriodicallyActivity : AppCompatActivity() {
             val ft = firstTime[int1]
             val int2 : Int =main_wheel_right.currentItemPosition
             val lt = lastTime[int2]
-            txtTime.text = "$ft - $lt"
+             textCalendar ="$ft - $lt"
+            txtTime.text = textCalendar
             wheelPickerLinearLayout.visibility = View.GONE
-
 
         }
     }
@@ -115,6 +136,66 @@ class PeriodicallyActivity : AppCompatActivity() {
             if (txtDialog != null) {
                 txtAddress.text = txtDialog.trim()
             }
+        }
+    }
+
+    override fun onClick(v: View?) {
+
+        if (v is CheckBox) {
+            val checked: Boolean = v.isChecked
+
+            when (v.id) {
+                R.id.checkboxT2 -> {
+                    if (checked) {
+                        sum += 1
+                    } else {
+                        sum -= 1
+                    }
+                }
+                R.id.checkboxT3 -> {
+                    if (checked) {
+                        sum += 1
+                    } else {
+                        sum -= 1
+                    }
+                }
+                R.id.checkboxT4 -> {
+                    if (checked) {
+                        sum += 1
+                    } else {
+                        sum -= 1
+                    }
+                }
+                R.id.checkboxT5 -> {
+                    if (checked) {
+                        sum += 1
+                    } else {
+                        sum -= 1
+                    }
+                }
+                R.id.checkboxT6 -> {
+                    if (checked) {
+                        sum += 1
+                    } else {
+                        sum -= 1
+                    }
+                }
+                R.id.checkboxT7 -> {
+                    if (checked) {
+                        sum += 1
+                    } else {
+                        sum -= 1
+                    }
+                }
+                R.id.checkboxCN -> {
+                    if (checked) {
+                        sum += 1
+                    } else {
+                        sum -= 1
+                    }
+                }
+            }
+            Log.d("AAA",sum.toString())
         }
     }
 

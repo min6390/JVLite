@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainPACK.HomePACK.ConfirmActivity"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40sp"
+        android:text="THÔNG TIN CA LÀM"
+        android:textSize="20sp"
+        android:layout_marginHorizontal="10sp"/>
+    <LinearLayout
+        android:padding="15sp"
+        android:background="@drawable/rim_confirm"
+        android:layout_marginVertical="5sp"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="10sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginVertical="10sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="38 Nguyễn Lâm, Phường 6, Quận 10, Hồ Chí Minh, Việt Nam"/>
+        <TextView
+            android:layout_marginVertical="10sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtTimeConfirm"
+            android:text="Thời gian"/>
+        <TextView
+            android:layout_marginVertical="10sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Không có ghi chú"
+            android:id="@+id/txtNotiConfirm"/>
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="GÓI DỊCH VỤ"
+        android:textSize="20sp"
+        android:layout_marginHorizontal="10sp"/>
+    <LinearLayout
+        android:padding="15sp"
+        android:background="@drawable/rim_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10sp"
+        android:layout_marginVertical="5sp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:text="Tổng : "/>
+        <TextView
+            android:id="@+id/txtMoneyConfirm"
+            android:layout_marginHorizontal="40sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tiền"
+            android:textSize="17sp"/>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <Button
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="THANH TOÁN"
+            android:id="@+id/btnConfirm"
+            android:background="@drawable/rim_button"
+            android:textColor="#FFF"/>
+    </RelativeLayout>
+</LinearLayout>
