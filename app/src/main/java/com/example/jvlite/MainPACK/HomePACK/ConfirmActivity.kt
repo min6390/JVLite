@@ -1,5 +1,6 @@
 package com.example.jvlite.MainPACK.HomePACK
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.jvlite.R
@@ -17,5 +18,9 @@ class ConfirmActivity : AppCompatActivity() {
         txtTimeConfirm.text= "$tbuoi1"
         txtMoneyConfirm.text=tmoney1
         txtNotiConfirm.text = noti
+        btnConfirm.setOnClickListener {
+            val intent = Intent(this, FinishActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
